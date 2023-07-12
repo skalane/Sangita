@@ -1,0 +1,18 @@
+name: Greeting
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  Greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Pint Hello World
+        run: test.sh
